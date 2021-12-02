@@ -7,3 +7,19 @@
     "featured"
     "footer";
 }
+
+.header {
+    grid-area: header;
+}
+
+.info {
+    grid-area: info;
+}
+
+.featured {
+    grid-area: featured;
+}
+
+.footer {
+    grid-area: footer;
+}
