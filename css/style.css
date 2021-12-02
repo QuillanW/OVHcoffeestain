@@ -1,15 +1,21 @@
+:root {
+    --grey: grey;
+}
+
 .container {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 500px 500px 200px;
     grid-template-areas:
-    "header"
-    "info"
-    "featured"
-    "footer";
+        "header"
+        "info"
+        "featured"
+        "footer";
 }
 
 .header {
     grid-area: header;
+    background-color: grey;
 }
 
 .info {
@@ -18,8 +24,80 @@
 
 .featured {
     grid-area: featured;
+
+}
+
+h4 {
+    font-size: 80px;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+}
+
+.slider1, .slider2, .slider3 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+.slide {
+    width: 49.5%;
+    margin: 5px;
+    flex-shrink: 0;
+    height: 98%;
+    text-align: center;
+    background-color: darkgray;
+    border-width: 10px;
+    border-radius: 5px;
+    overflow-y: hidden;
+}
+
+.selector {
+    border-radius: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+#selectorbutton {
+    display: inline-block;
+    background: darkgray;
+    text-decoration: none;
+    color: var(--tekstKleur);
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 0;
+}
+
+#selectorbutton:hover {
+    background: gray;
+}
+
+.slides>div {
+    scroll-snap-align: start;
 }
 
 .footer {
     grid-area: footer;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--accentKleur);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

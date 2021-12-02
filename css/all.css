@@ -1,3 +1,7 @@
+:root {
+    --grey: grey;
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.5s;
