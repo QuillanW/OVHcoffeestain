@@ -1,0 +1,9 @@
+.container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 500px 500px 200px;
+    grid-template-areas:
+    "header"
+    "info"
+    "featured"
+    "footer";
+}
