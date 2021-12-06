@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/*Variables*/
+:root {
+  --donker: #0c0c0c;
+  --licht: #efefef;
+  --lichttekstAccent: #fbe0c3;
+  --donkertekstAccent: #344648;
+  --navbarkleur: #7d8e95;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+}
+
+
+body {
+  background: var(--accentKleur);
+  color: var(--tekstKleur);
+  overflow-x: hidden;
+}
+
+/*Standaard thema*/
+body.dag {
+  --accentKleur: var(--licht);
+  --tekstKleur: var(--donkertekstAccent);
+  --anderTekst: var(--lichttekstAccent);
+}
+
+/*Donkere thema*/
+body.night {
+  --accentKleur: var(--donker);
+  --tekstKleur: var(--lichttekstAccent);
+  --anderTekst: var(--donkertekstAccent);
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 70px;
+}
+
+.goog-te-banner-frame.skiptranslate {display: none !important;} 
+body { top: 0px !important; }
+
+h4 {
+  font-size: 80px;
+}
+
+p {
+  text-align: center;
+  font-size: 25px;
+}
+
+.slider1,.slider2,.slider3 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.slide {
+  width: 49.5%;
+  margin: 5px;
+  flex-shrink: 0;
+  height: 98%;
+  text-align: center;
+  background-color: darkgray;
+  border-width: 10px;
+  border-radius: 5px;
+  overflow-y: hidden;
+}
+
+.selector {
+  border-radius: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+#selectorbutton {
+  display: inline-block;
+  background: darkgray;
+  text-decoration: none;
+  color: var(--tekstKleur);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 0;
+}
+
+#selectorbutton:hover {
+  background: gray;
+}
+
+.slides>div {
+  scroll-snap-align: start;
+}
+
+.empty {
+  height: 150px;
+}
+
+.image {
+  display: block;
+  width: 50%;
+  float: left;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.animalName {
+  box-sizing: content-box;
+  text-align: center;
+  width: 50%;
+  font-size: 200%;
+}
+
+.animalInfo {
+  float: left;
+  width: 50%;
+}
+
+.livestream {
+  margin-left: 16%;
+}
