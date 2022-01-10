@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/*Variables*/
+:root {
+  --donker: #2c2c2c;
+  --licht: #dbdbdb;
+  --lichttekstAccent: #dbdbdb;
+  --donkertekstAccent: #3a3b3b;
+  --navbarkleur: #ae7f6a;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--accentKleur);
+    color: var(--tekstKleur);
+}
+
+/*Standaard thema*/
+body.dag {
+    --accentKleur: var(--licht);
+    --tekstKleur: var(--donkertekstAccent);
+    --anderTekst: var(--lichttekstAccent);
+}
+
+/*Donkere thema*/
+body.night {
+    --accentKleur: var(--donker);
+    --tekstKleur: var(--lichttekstAccent);
+    --anderTekst: var(--donkertekstAccent);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    top: 0;
+    position: sticky;
+    background-color: var(--navbarkleur);
+}
+
+.titel {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    left: 15px;
+    position: absolute;
+}
+
+.titel a {
+    color: var(--tekstKleur);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.titel a:hover {
+    color: var(--anderTekst);
+    text-shadow: 0 0 15px var(--donkertekstAccent);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links .active {
+    color: var(--anderTekst);
+}
+
+.nav-links .active:hover {
+    letter-spacing: 6px;
+    color: var(--tekstKleur);
+    text-shadow: 0 0 15px var(--donkertekstAccent);
+}
+
+.nav-links a {
+    color: var(--tekstKleur);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 25px;
+    transition: 0.5s;
+}
+
+.nav-links a:hover {
+    letter-spacing: 6px;
+    color: var(--anderTekst);
+    text-shadow: 0 0 15px var(--donkertekstAccent);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+
+.label {
+    background-color: var(--anderTekst);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    left: 60px;
+}
+
+.ball {
+    background-color: var(--accentKleur);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: all 0.2s linear;
+}
+
+.goog-te-banner-frame.skiptranslate {display: none !important;} 
+body { top: 0px !important; }
+
+.ball:hover {
+    background-color: var(--tekstKleur);
+}
+
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: var(--tekstKleur);
+}
+
+.fa-sun {
+    color: var(--tekstKleur);
+}
+
+.midden {
+    position: fixed;
+    display: flex;
+    left: 7.5%;
+    top: 10%;
+    width: 85%;
+    height: 75%;
+    background-color: var(--navbarkleur);
+    border-radius: 20px;
+}
+
+.gogle {
+    position: relative;
+    top: 20%;
+}
+
+.heading {
+    font-weight: bold;
+	border-bottom: 2px solid var(--accentKleur);
+	margin-bottom: 20px;
+	font-size: 15px;
+	padding-bottom: 3px;
+}
+
+.formding{
+    position: relative;
+    top: 10%;
+    left: 3%;
+    max-width: 47%;
+    padding: 20px 12px 10px 20px;
+    width: 100%;
+}
+
+textarea{
+    max-height: 200px;
+    max-width: 400px;
+}
+
+.formding label{
+    display: block;
+	margin: 0px 0px 15px 0px;
+}
+
+.formding label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+
+.formding span.required {
+    color: red;
+}
+
+.formding input.input-field, .formding .select-field{
+    width: 48%;
+}
+
+.formding input.input-field,
+.formding .textarea-field,
+.formding .select-field{
+    color: var(--tekstKleur);
+    box-sizing: border-box;
+    border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 7px;
+	outline: none;
+}
+
+.formding .input-field:focus, 
+.formding .textarea-field:focus,  
+.formding .select-field:focus {
+    color: var(--tekstKleur);
+}
+
+.formding .textarea-field{
+    color: var(--tekstKleur);
+	height:100px;
+	width: 55%;
+}
+
+.formding input[type=submit],
+.formding input[type=button]{
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: var(--accentKleur);
+	color: var(--tekstKleur);
+    transition: 0.5s;
+}
+.formding input[type=submit]:hover,
+.formding input[type=button]:hover{
+    color: var(--tekstKleur);
+    background-color: var(--tekstKleur);
+}
+
+.formding input[type="text"], textarea, .formding input[type="email"]{
+    background-color: var(--anderTekst);
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    background-color: var(--navbarkleur);
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    color: var(--tekstKleur);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 8px 25px;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: var(--anderTekst);
+    text-shadow: 0 0 5px var(--donkertekstAccent);
+}
+
+.footerLeft {
+    float: left;
+    margin-left: 25%;
+}
+
+.footerRight {
+    float: right;
+    margin-right: 25%;
+}
+
+#cookiePopup {
+    background-color: #fff9;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    padding: 30px;
+    border-radius: 0px 10px 0px 0px;
+}

@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/*Variables*/
+:root {
+    --donker: #0c0c0c;
+    --licht: #efefef;
+    --lichttekstAccent: #fbe0c3;
+    --donkertekstAccent: #344648;
+    --navbarkleur: #7d8e95;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--accentKleur);
+    color: var(--tekstKleur);
+    --accentKleur: var(--licht);
+    --tekstKleur: var(--donkertekstAccent);
+    --anderTekst: var(--lichttekstAccent);
+}
+
+/*Standaard thema*/
+body.dag {
+    --accentKleur: var(--licht);
+    --tekstKleur: var(--donkertekstAccent);
+    --anderTekst: var(--lichttekstAccent);
+}
+
+/*Donkere thema*/
+body.night {
+    --accentKleur: var(--donker);
+    --tekstKleur: var(--lichttekstAccent);
+    --anderTekst: var(--donkertekstAccent);
+}
+
+
+/*Navbar en header begin*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    top: 0;
+    position: sticky;
+    background-color: var(--navbarkleur);
+}
+
+.titel {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    left: 15px;
+    position: absolute;
+}
+
+.titel a {
+    color: var(--tekstKleur);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.titel a:hover {
+    color: var(--anderTekst);
+    text-shadow: 0 0 15px var(--donkertekstAccent);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links .active {
+    color: var(--anderTekst);
+}
+
+.nav-links .active:hover {
+    letter-spacing: 6px;
+    color: var(--tekstKleur);
+    text-shadow: 0 0 15px var(--donkertekstAccent);
+}
+
+.nav-links a {
+    color: var(--tekstKleur);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 25px;
+    transition: 0.5s;
+}
+
+.nav-links a:hover {
+    letter-spacing: 6px;
+    color: var(--anderTekst);
+    text-shadow: 0 0 15px var(--donkertekstAccent);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+
+.label {
+    background-color: var(--anderTekst);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    left: 60px;
+}
+
+.ball {
+    background-color: var(--accentKleur);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: all 0.2s linear;
+}
+
+.ball:hover {
+    background-color: var(--tekstKleur);
+}
+
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: var(--tekstKleur);
+}
+
+.fa-sun {
+    color: var(--tekstKleur);
+}
+
+/*Navbar en header einde*/
+
+/*Midden begin*/
+.midden {
+    position: fixed;
+    display: flex;
+    left: 7.5%;
+    top: 10%;
+    width: 85%;
+    height: 75%;
+    background-color: var(--navbarkleur);
+    border-radius: 20px;
+}
+
+.textlinks {
+    position: absolute;
+    justify-self: center;
+    font-size: 26px;
+    top: 5%;
+    left: 40%;
+}
+
+.goog-te-banner-frame.skiptranslate {display: none !important;} 
+body { top: 0px !important; }
+
+.textrechts {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    top: 20%;
+    max-width: 50%;
+    left: 25%;
+}
+
+.privacy1{
+    position: absolute;
+    justify-self: center;
+    font-size: 26px;
+    top: 5%;
+    left: 45%;
+}
+
+.privacy{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    top: 20%;
+    max-width: 50%;
+    left: 45.5%;
+}
+
+.textrechts p {
+    margin-bottom: 50px;
+}
+
+.textrechts span {
+    color: var(--anderTekst);
+}
+
+.midden .foto {
+    position: relative;
+    size: 10%;
+}
+
+.knoper {
+    padding: 5px 5px;
+    margin-right: 20px;
+    background-color: var(--tekstKleur);
+    text-decoration: none;
+    color: var(--anderTekst);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.knoper:hover {
+    color: var(--tekstKleur);
+    background-color: var(--anderTekst);
+}
+
+/*Midden einde*/
+
+/*Footer begin*/
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+    background-color: var(--navbarkleur);
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    color: var(--tekstKleur);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 8px 25px;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: var(--anderTekst);
+    text-shadow: 0 0 5px var(--donkertekstAccent);
+}
+
+.footerLeft {
+    float: left;
+    margin-left: 25%;
+}
+
+.footerRight {
+    float: right;
+    margin-right: 25%;
+}
+
+.social a {
+    margin-left: 25px;
+    padding: 0px;
+}
+
+#cookiePopup {
+    background-color: #fff9;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    padding: 30px;
+    border-radius: 0px 10px 0px 0px;
+}
+
+/*Footer Einde*/
+
+/*Scrollbar Begin*/
+::-webkit-scrollbar-track {
+    background: var(--accentKleur);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*Scrollbar Einde*/

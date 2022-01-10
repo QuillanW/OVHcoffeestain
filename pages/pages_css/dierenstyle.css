@@ -2,11 +2,11 @@
 
 /*Variables*/
 :root {
-  --donker: #2c2c2c;
-  --licht: #dbdbdb;
-  --lichttekstAccent: #dbdbdb;
-  --donkertekstAccent: #3a3b3b;
-  --navbarkleur: #ae7f6a;
+  --donker: #0c0c0c;
+  --licht: #efefef;
+  --lichttekstAccent: #fbe0c3;
+  --donkertekstAccent: #344648;
+  --navbarkleur: #7d8e95;
 }
 
 * {
@@ -48,13 +48,8 @@ h3 {
   font-size: 70px;
 }
 
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0px !important;
-}
+.goog-te-banner-frame.skiptranslate {display: none !important;} 
+body { top: 0px !important; }
 
 h4 {
   font-size: 80px;
@@ -65,7 +60,7 @@ p {
   font-size: 25px;
 }
 
-.slider1, .slider2, .slider3 {
+.slider1,.slider2,.slider3 {
   width: 100%;
   height: 500px;
   display: flex;
