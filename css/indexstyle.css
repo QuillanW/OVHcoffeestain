@@ -124,14 +124,14 @@ p {
   border-radius: 5px;
 }
 
-.animalName {
+.productName {
   box-sizing: content-box;
   text-align: center;
   width: 50%;
   font-size: 200%;
 }
 
-.animalInfo {
+.productInfo {
   float: left;
   width: 50%;
 }
