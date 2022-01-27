@@ -2,11 +2,11 @@
 
 /*Variables*/
 :root {
-    --donker: #0c0c0c;
-    --licht: #efefef;
-    --lichttekstAccent: #fbe0c3;
-    --donkertekstAccent: #344648;
-    --navbarkleur: #7d8e95;
+    --donker: #2c2c2c;
+    --licht: #dbdbdb;
+    --lichttekstAccent: #dbdbdb;
+    --donkertekstAccent: #3a3b3b;
+    --navbarkleur: #ae7f6a;
 }
 
 * {
@@ -190,10 +190,10 @@ body { top: 0px !important; }
 
 .privacy1{
     position: absolute;
-    justify-self: center;
-    font-size: 26px;
-    top: 5%;
-    left: 45%;
+    top: 1%;
+    left: 35%;
+    width: 30%;
+    font-size: 30px;
 }
 
 .privacy{
@@ -201,9 +201,9 @@ body { top: 0px !important; }
     justify-content: center;
     text-align: center;
     font-size: 18px;
-    top: 20%;
-    max-width: 50%;
-    left: 45.5%;
+    top: 10%;
+    max-width: 80%;
+    left: 10%;
 }
 
 .textrechts p {
